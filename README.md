@@ -1,2 +1,2 @@
-# old_code
-Códigos do BILL antigo
+# UNEB (by Pedro Henrique)
+Repositório com os meus arquivos da faculdade.
