@@ -1,0 +1,5 @@
+os métodos "static" podem ser acessados/executados sem ter objetos.
+
+public static void main (String[] args){
+
+}
