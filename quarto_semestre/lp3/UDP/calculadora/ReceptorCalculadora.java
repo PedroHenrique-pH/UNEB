@@ -1,4 +1,4 @@
-package calculadora;
+import Calculadora;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -7,6 +7,7 @@ import java.net.InetAddress;
 public class ReceptorCalculadora {
     public static void main(String[] args) {
         final int PORT = 55555;
+        Calculadora calc = new Calculadora();
 
         try (DatagramSocket socket = new DatagramSocket(PORT)) {
             System.out.println("Servidor UDP da Calculadora aguardando...");
@@ -34,10 +35,10 @@ public class ReceptorCalculadora {
 
                 double resultado = 0;
                 switch (operacao) {
-                    case 1: resultado = Calculadora.somar(num1, num2); break;
-                    case 2: resultado = Calculadora.subtrair(num1, num2); break;
-                    case 3: resultado = Calculadora.dividir(num1, num2); break;
-                    case 4: resultado = Calculadora.multiplicar(num1, num2); break;
+                    case 1: resultado = calc.somar(num1, num2); break;
+                    case 2: resultado = calc.subtrair(num1, num2); break;
+                    case 3: resultado = calc.dividir(num1, num2); break;
+                    case 4: resultado = calc.multiplicar(num1, num2); break;
                     default:
                         System.out.println("Operação inválida!");
                         continue;
