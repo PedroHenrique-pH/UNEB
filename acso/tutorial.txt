@@ -1,8 +1,0 @@
-1. criar o nó 
-2. criar o server do serviço (criar interface do serviço)
-3. criar nó de teste para testar o serviço (criar um client do serviço dummy)
-4. criar client no mission control node
-5. criar função para chamar serviço no mission control node
-6. criar skill (que vai chamar serviço pelo mission control node e vai mandar done callback)
-7. adicionar skill no skills manager
-8. testar numa missão
