@@ -1,5 +1,3 @@
-import Calculadora;
-
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -33,16 +31,7 @@ public class ReceptorCalculadora {
                 double num1 = Double.parseDouble(partes[1]);
                 double num2 = Double.parseDouble(partes[2]);
 
-                double resultado = 0;
-                switch (operacao) {
-                    case 1: resultado = calc.somar(num1, num2); break;
-                    case 2: resultado = calc.subtrair(num1, num2); break;
-                    case 3: resultado = calc.dividir(num1, num2); break;
-                    case 4: resultado = calc.multiplicar(num1, num2); break;
-                    default:
-                        System.out.println("Operação inválida!");
-                        continue;
-                }
+                double resultado = calc.realizar_operacao(num1, num1, operacao);
 
                 System.out.println("Resultado: " + resultado);
 

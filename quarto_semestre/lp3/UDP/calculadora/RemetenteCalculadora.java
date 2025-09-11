@@ -1,10 +1,9 @@
-package calculadora;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.Scanner;
 
-public class RemetenteUDP {
+public class RemetenteCalculadora {
     public static void main(String[] args) {
         final String SERVER_IP = "127.0.0.1";
         final int SERVER_PORT = 55555;

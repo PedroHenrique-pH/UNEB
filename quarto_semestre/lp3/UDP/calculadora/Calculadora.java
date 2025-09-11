@@ -1,26 +1,34 @@
-package calculadora;
 public class Calculadora {
 
-    // Método para somar dois números
-    public double somar(double a, double b) {
-        return a + b;
-    }
+    public double realizar_operacao(double a, double b, int op){
+        double resultado = 0;
+                
+                switch (op) {
+                    case 1: 
+                        resultado = a + b; 
+                        break;
 
-    // Método para subtrair dois números
-    public double subtrair(double a, double b) {
-        return a - b;
-    }
+                    case 2: 
+                        resultado = a - b;
+                        break;
 
-    // Método para multiplicar dois números
-    public double multiplicar(double a, double b) {
-        return a * b;
-    }
+                    case 3:
+                        if (b == 0) {
+                            throw new IllegalArgumentException("Não é possível dividir por zero!");
+                        } else{
+                            resultado = a / b;
+                        }
+                        break;
 
-    // Método para dividir dois números
-    public double dividir(double a, double b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Não é possível dividir por zero!");
-        }
-        return a / b;
+                    case 4: 
+                        resultado = a * b; 
+                        break;
+
+                    default:
+                        System.out.println("Operação inválida!");
+                        break;
+                }
+        return resultado;
+
     }
 }
